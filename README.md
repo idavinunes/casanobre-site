@@ -1,6 +1,17 @@
 # Casa Nobre Piscinas — modelo de site
 
-**Status:** modelo de apresentação. **Não publicar.**
+**Status:** modelo de apresentação. **No ar só em ambiente de teste:**
+<https://casanobre-test.axisnetworks.com.br> — app `casanobre-site` no Coolify,
+repo `idavinunes/casanobre-site`, branch `main`. **Não é o site de produção** e o
+domínio real (`casanobrestore.com.br`, hoje na loja Bling) **não foi tocado**.
+
+Todas as páginas saem com `noindex,nofollow` — os dados são placeholder
+("00 anos", "0,00", "00h às 00h") e isso não pode cair no Google.
+
+⚠️ **Deploy não é automático.** O repo não tem webhook no GitHub (o flag
+`is_auto_deploy_enabled` do Coolify está ligado, mas sozinho não faz nada).
+Depois do push: `POST /api/v1/deploy?uuid=eucdev19p3r7rpbftsvzl7e7`.
+
 Fonte de verdade do cliente: `~/dev/aiox-vault/06-Empresas/casa-nobre-store.md`
 
 ## Rodar
@@ -74,9 +85,12 @@ Em `conteudo/home.html`, ponha o ID do vídeo do YouTube e rode o gerador:
 
 `data-inicio` e `data-fim` (em segundos) cortam um trecho do vídeo — opcionais.
 
-> ⚠️ **Hoje está com o vídeo do CONCORRENTE** (Cristal Pool, `L-Q0qFJsB_w`,
-> trecho 73→130s) só para demonstrar o efeito. **Trocar pelo vídeo da Casa Nobre**
-> antes de mostrar como se fosse dela.
+> 🔴 **Hoje está com o vídeo do CONCORRENTE** (Cristal Pool, `L-Q0qFJsB_w`,
+> trecho 73→130s) — e **está assim no link de teste, que é público**, por decisão
+> do Davi em 2026-09-17 (ele quis manter para o cliente ver o efeito pretendido).
+> **Trocar pelo vídeo da Casa Nobre** antes de qualquer divulgação mais ampla.
+> Desligar é uma linha: `data-video=""` em `conteudo/home.html` + rodar o gerador —
+> as 3 fotos voltam a girar sozinhas.
 
 O fundo vira vídeo e as fotos somem sozinhas. Técnica copiada da Cristal Pool
 (iframe maior que a tela, `pointer-events:none`, controles ocultos).
@@ -101,8 +115,12 @@ Sem ID, as 3 fotos do hero giram com fade de 1,6s.
 ## ⚠️ O que falta (bloqueios reais)
 
 - 🔴 **Foto real de obra entregue.** As atuais são banco livre (CC-BY, piscina de
-  resort) — servem para apresentar o layout, **não para publicar**. Créditos em
-  `midia/CREDITOS.json`. Todo concorrente do segmento vive de foto de obra.
+  resort) — servem para apresentar o layout, **não para publicar**. Todo concorrente
+  do segmento vive de foto de obra.
+- 🔴 **`midia/CREDITOS.json` está VAZIO (`[]`)** — o texto acima diz que os créditos
+  estão lá, mas não estão. Ou seja: **a procedência das 6 fotos não está registrada
+  em lugar nenhum**, e CC-BY exige atribuição. Ou se recupera a origem de cada uma,
+  ou se troca por foto real do cliente. Achado em 2026-09-17. Todo concorrente do segmento vive de foto de obra.
 - 🔴 **Vetor do logo (SVG/AI).** O logo do site foi *reconstruído* com a fonte
   Outfit — é aproximação. Para produção, pedir o original ao designer.
 - 🔴 **Dados técnicos reais** dos modelos (hoje tudo `0,00`).
