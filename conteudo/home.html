@@ -1,0 +1,161 @@
+<section class="hero">
+  <div class="fb"></div>
+
+  <!-- FUNDO 1: fotos em transicao suave (fallback quando nao ha video) -->
+  <img class="foto mostra" fetchpriority="high" decoding="async" src="midia/quintal.jpg" alt="Piscina em quintal residencial">
+  <img class="foto" decoding="async" src="midia/slide-tropical.jpg" alt="Piscina com palmeiras">
+  <img class="foto" decoding="async" src="midia/slide-hotel.jpg" alt="Piscina com area de lazer">
+
+  <!-- FUNDO 2: video do YouTube (tecnica da Cristal Pool).
+       data-video  = id do video no YouTube (vazio = as 3 fotos giram)
+       data-inicio = segundo em que o trecho comeca   (opcional)
+       data-fim    = segundo em que o trecho termina  (opcional)
+
+       ATENCAO: o id abaixo e o video do CONCORRENTE (Cristal Pool), so para
+       ver o efeito funcionando. Trocar pelo video da Casa Nobre antes de
+       qualquer coisa que saia daqui. -->
+  <div class="bg-video" id="bgVideo" data-video="L-Q0qFJsB_w" data-inicio="73" data-fim="130"></div>
+
+  <video autoplay muted loop playsinline><source src="midia/hero.mp4" type="video/mp4"></video>
+  <svg class="ondas" viewBox="0 0 1440 190" preserveAspectRatio="none">
+    <path fill="#6F96CE" d="M0,110 C180,60 360,150 720,110 C1080,70 1260,140 1440,100 L1440,190 L0,190 Z M1440,110 C1620,60 1800,150 2160,110 C2520,70 2700,140 2880,100 L2880,190 L1440,190 Z"/>
+    <path fill="#33509E" d="M0,130 C240,90 480,165 720,130 C960,95 1200,160 1440,125 L1440,190 L0,190 Z M1440,130 C1680,90 1920,165 2160,130 C2400,95 2640,160 2880,125 L2880,190 L1440,190 Z"/>
+    <path fill="#212A53" d="M0,152 C200,125 400,178 720,152 C1040,126 1240,172 1440,148 L1440,190 L0,190 Z M1440,152 C1640,125 1840,178 2160,152 C2480,126 2680,172 2880,148 L2880,190 L1440,190 Z"/>
+  </svg>
+  <div class="hero-txt">
+    <span class="selo">Campo Largo · Curitiba e região</span>
+    <h1>A piscina que muda<br>o <em>fim de semana</em><br>da sua casa</h1>
+    <p>Projeto, instalação e entrega completa. Você escolhe o modelo — a gente resolve o resto.</p>
+    <div class="ctas">
+      <a href="#" class="cta cta-1" data-chat>💬 Falar com a gente</a>
+      <a href="modelos/index.html" class="cta cta-2">Ver modelos</a>
+    </div>
+  </div>
+  <div class="scroll-i">role<span></span></div>
+</section>
+
+<section class="pilares">
+  <div class="tit rev">
+    <span class="cap">Por que a Casa Nobre</span>
+    <h2>Da escolha do modelo à <em>primeira nadada</em></h2>
+    <p>Sem empreiteiro sumido, sem obra parada, sem surpresa no orçamento.</p>
+  </div>
+  <div class="g3">
+    <div class="card rev d1"><div class="ic">🏊</div><h3>Fibra e alvenaria</h3>
+      <p>Modelos prontos em fibra para entrega rápida, ou projeto em alvenaria sob medida para o seu espaço.</p></div>
+    <div class="card rev d2"><div class="ic">🔧</div><h3>Instalação completa</h3>
+      <p>Escavação, nivelamento, casa de máquinas e acabamento. Uma equipe só, do início ao fim.</p></div>
+    <div class="card rev d3"><div class="ic">💧</div><h3>Depois da entrega</h3>
+      <p>Produtos químicos, acessórios e orientação de tratamento. A loja continua aqui quando você precisar.</p></div>
+  </div>
+  <div class="mais-link rev d3">
+    <a href="como-funciona.html">Ver como funciona o processo, etapa por etapa →</a>
+  </div>
+</section>
+
+<section id="modelos">
+  <div class="tit rev">
+    <span class="cap">Modelos</span>
+    <h2>Escolha o formato. <em>Veja na sua casa.</em></h2>
+    <p>Cada modelo com medida real e prazo de instalação. Sem "consulte-nos".</p>
+  </div>
+
+  <!-- ===== CARROSSEL SLIDE / VIDEO ===== -->
+  <div class="carrossel rev" id="carrossel">
+    <div class="trilho" id="trilho">
+
+      <div class="slide ativo" data-tipo="foto">
+        <img class="sl-foto" src="midia/slide-tropical.jpg" alt="Piscina com palmeiras">
+        <div class="sl-cap">
+          <a href="modelos/modelo-a.html" class="sl-tag" style="text-decoration:none">Modelo A →</a>
+          <h3>Nome do modelo</h3>
+          <p>0,00 × 0,00 × 0,00 m · prazo 00 dias</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="foto">
+        <img class="sl-foto" loading="lazy" decoding="async" src="midia/quintal.jpg" alt="Piscina em quintal residencial">
+        <div class="sl-cap">
+          <a href="modelos/modelo-b.html" class="sl-tag" style="text-decoration:none">Modelo B →</a>
+          <h3>Nome do modelo</h3>
+          <p>0,00 × 0,00 × 0,00 m · prazo 00 dias</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="video">
+        <video class="sl-video" muted loop playsinline><source src="midia/obra-01.mp4" type="video/mp4"></video>
+        <div class="sl-ph"><div class="play">▶</div>Vídeo · obra sendo instalada</div>
+        <div class="sl-cap">
+          <span class="sl-tag">Vídeo</span>
+          <h3>Da escavação à água</h3>
+          <p>Uma instalação inteira em 40 segundos.</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="foto">
+        <img class="sl-foto" loading="lazy" decoding="async" src="midia/slide-hotel.jpg" alt="Piscina com área de lazer">
+        <div class="sl-cap">
+          <a href="modelos/modelo-c.html" class="sl-tag" style="text-decoration:none">Modelo C →</a>
+          <h3>Nome do modelo</h3>
+          <p>0,00 × 0,00 × 0,00 m · prazo 00 dias</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="foto">
+        <img class="sl-foto" loading="lazy" decoding="async" src="midia/slide-gramado.jpg" alt="Piscina redonda no gramado">
+        <div class="sl-cap">
+          <a href="modelos/sob-medida.html" class="sl-tag" style="text-decoration:none">Sob medida →</a>
+          <h3>Projeto exclusivo</h3>
+          <p>Alvenaria no formato do seu terreno.</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="foto">
+        <img class="sl-foto" loading="lazy" decoding="async" src="midia/slide-palmeiras.jpg" alt="Reflexo de palmeiras na agua">
+        <div class="sl-cap">
+          <a href="modelos/modelo-a.html" class="sl-tag" style="text-decoration:none">Acabamento →</a>
+          <h3>Revestimento e borda</h3>
+          <p>Opções de pastilha, borda infinita e prainha.</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="video">
+        <video class="sl-video" muted loop playsinline><source src="midia/spa-02.mp4" type="video/mp4"></video>
+        <div class="sl-ph"><div class="play">▶</div>Vídeo · spa em funcionamento</div>
+        <div class="sl-cap">
+          <span class="sl-tag">Vídeo</span>
+          <h3>Spa aquecido</h3>
+          <p>Hidro ligada, à noite, com iluminação.</p>
+        </div>
+      </div>
+
+      <div class="slide" data-tipo="foto">
+        <img class="sl-foto" loading="lazy" decoding="async" src="midia/slide-agua.jpg" alt="Agua corrente na piscina">
+        <div class="sl-cap">
+          <a href="modelos/modelo-b.html" class="sl-tag" style="text-decoration:none">Tratamento →</a>
+          <h3>Água sempre pronta</h3>
+          <p>Filtragem, químicos e manutenção.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="seta ant" id="ant" aria-label="Anterior">‹</button>
+    <button class="seta prox" id="prox" aria-label="Próximo">›</button>
+    <div class="pontos" id="pontos"></div>
+    <div class="progresso"><i id="barraProg"></i></div>
+  </div>
+  <div style="text-align:center;margin-top:38px">
+    <a href="modelos/index.html" class="cta cta-1">Ver todos os modelos →</a>
+  </div>
+</section>
+
+<section class="final" id="contato">
+  <div class="fi">
+    <h2 class="rev">Quanto custa a piscina <em>na sua casa?</em></h2>
+    <p class="rev d1">Manda a medida do espaço no chat. A gente responde com modelo e valor.</p>
+    <a href="#" class="cta cta-1 rev d2" data-chat>💬 Abrir conversa</a>
+    <small class="rev d3">Av. Ayrton Senna da Silva, 3000 — Jd. Busmayer, Campo Largo/PR ·
+      <a href="contato.html" style="color:#fff;text-decoration:underline">ver todos os contatos</a></small>
+  </div>
+</section>

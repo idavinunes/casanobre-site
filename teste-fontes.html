@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teste de fonte dos títulos — Casa Nobre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Serif+Display:ital@0;1&family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--marinho:#212A53;--royal:#33509E;--claro:#6F96CE;--marinho-esc:#151B38;--gelo:#F4F7FC}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--marinho);background:var(--gelo)}
+
+.topo{background:#fff;padding:34px 6vw;border-bottom:1px solid rgba(33,42,83,.1)}
+.topo h1{font-size:23px;font-weight:600;margin-bottom:9px}
+.topo p{color:#5c6480;font-size:15px;font-weight:300;line-height:1.7;max-width:760px}
+.topo code{background:var(--gelo);padding:2px 7px;border-radius:5px;font-size:13px}
+
+.amostra{margin:0 auto;max-width:1180px;padding:30px 6vw}
+.rot{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.rot b{font-size:18px;font-weight:600}
+.rot .n{width:26px;height:26px;border-radius:50%;background:var(--marinho);color:#fff;
+  font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rot span{font-size:13px;color:#7a86a3;font-weight:300}
+.rot .alerta{background:#FEF3C7;color:#92400E;padding:3px 10px;border-radius:20px;
+  font-size:11.5px;font-weight:600}
+.rot .atual{background:var(--royal);color:#fff;padding:3px 10px;border-radius:20px;
+  font-size:11.5px;font-weight:600}
+
+.par{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;border-radius:18px;overflow:hidden;
+  box-shadow:0 14px 40px rgba(33,42,83,.13);background:#fff}
+@media(max-width:900px){.par{grid-template-columns:1fr}}
+
+/* lado escuro = o hero de verdade */
+.escuro{background:linear-gradient(120deg,#151B38 0%,#212A53 55%,#2E4A8C 100%);
+  padding:44px 40px;display:flex;flex-direction:column;justify-content:center;min-height:270px}
+.escuro .selo{display:inline-block;align-self:flex-start;border:1px solid rgba(255,255,255,.4);
+  border-radius:40px;padding:5px 15px;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;margin-bottom:18px;font-weight:500}
+.escuro h2{color:#fff;font-weight:300;line-height:1.06;font-size:clamp(1.7rem,3.1vw,2.7rem);
+  letter-spacing:-.02em;margin-bottom:15px}
+.escuro h2 em{font-style:italic;color:var(--claro);font-weight:400}
+.escuro p{color:rgba(255,255,255,.85);font-size:14px;font-weight:300;line-height:1.6;max-width:400px}
+
+/* lado claro = titulo de seção interna */
+.claro{padding:44px 38px;display:flex;flex-direction:column;justify-content:center}
+.claro .cap{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--royal);
+  font-weight:700;margin-bottom:12px}
+.claro h3{font-weight:300;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.15;
+  letter-spacing:-.018em;margin-bottom:13px}
+.claro h3 em{font-style:italic;color:var(--royal)}
+.claro p{color:#5c6480;font-size:14.5px;line-height:1.72;font-weight:300}
+
+/* ===== as fontes candidatas ===== */
+.f-fraunces  .escuro h2,.f-fraunces  .claro h3{font-family:'Fraunces',serif}
+.f-marcellus .escuro h2,.f-marcellus .claro h3{font-family:'Marcellus',serif;font-weight:400}
+.f-cormorant .escuro h2,.f-cormorant .claro h3{font-family:'Cormorant Garamond',serif}
+.f-playfair  .escuro h2,.f-playfair  .claro h3{font-family:'Playfair Display',serif;font-weight:400}
+.f-dmserif   .escuro h2,.f-dmserif   .claro h3{font-family:'DM Serif Display',serif;font-weight:400}
+.f-instrument .escuro h2,.f-instrument .claro h3{font-family:'Instrument Serif',serif;font-weight:400}
+.f-lora      .escuro h2,.f-lora      .claro h3{font-family:'Lora',serif;font-weight:400}
+.f-outfit    .escuro h2,.f-outfit    .claro h3{font-family:'Outfit',sans-serif;font-weight:200;letter-spacing:-.03em}
+.f-outfit .escuro h2 em,.f-outfit .claro h3 em{font-style:normal;font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <h1>Fonte dos títulos — 8 opções lado a lado</h1>
+  <p>O corpo do texto continua <b>Outfit</b> em todas. Só muda a fonte dos títulos.
+     À esquerda o hero da home, à direita um título de seção interna — os dois lugares
+     onde a fonte mais aparece. Me diga o número e eu troco no site inteiro
+     (<code>--fonte-tit</code> no <code>estilo.css</code> + <code>FONTES</code> no <code>layout.py</code>).</p>
+</div>
+
+<!-- 1 -->
+<div class="amostra">
+  <div class="rot"><span class="n">1</span><b>Fraunces</b><span class="atual">é a de hoje</span>
+    <span>serifada “macia”, com formas propositalmente tortas · tem itálico de verdade</span></div>
+  <div class="par f-fraunces">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="amostra">
+  <div class="rot"><span class="n">2</span><b>Marcellus</b>
+    <span>romana lapidar, tom clássico e sóbrio — combina com o nome “Casa Nobre”</span>
+    <span class="alerta">não tem itálico real</span></div>
+  <div class="par f-marcellus">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="amostra">
+  <div class="rot"><span class="n">3</span><b>Cormorant Garamond</b>
+    <span>fina e alongada, ar de alto padrão · tem itálico de verdade</span></div>
+  <div class="par f-cormorant">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="amostra">
+  <div class="rot"><span class="n">4</span><b>Playfair Display</b>
+    <span>contraste alto, elegante — a mais usada em imóvel e alto padrão · tem itálico</span></div>
+  <div class="par f-playfair">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="amostra">
+  <div class="rot"><span class="n">5</span><b>DM Serif Display</b>
+    <span>serifada moderna e cheia, mais firme e menos delicada · tem itálico</span></div>
+  <div class="par f-dmserif">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="amostra">
+  <div class="rot"><span class="n">6</span><b>Instrument Serif</b>
+    <span>editorial contemporânea, estreita e discreta · tem itálico</span></div>
+  <div class="par f-instrument">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="amostra">
+  <div class="rot"><span class="n">7</span><b>Lora</b>
+    <span>serifada calma e legível, sem drama — a mais “neutra” da lista · tem itálico</span></div>
+  <div class="par f-lora">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="amostra">
+  <div class="rot"><span class="n">8</span><b>Outfit fina (sem serifa)</b>
+    <span>título na mesma família do corpo — tira a serifa do site e deixa tudo moderno.
+      O destaque deixa de ser itálico e vira peso.</span></div>
+  <div class="par f-outfit">
+    <div class="escuro"><span class="selo">Campo Largo · Curitiba e região</span>
+      <h2>A piscina que muda<br>o <em>fim de semana</em> da sua casa</h2>
+      <p>Projeto, instalação e entrega completa.</p></div>
+    <div class="claro"><div class="cap">Como funciona</div>
+      <h3>Você acompanha <em>cada etapa</em></h3>
+      <p>A maior dúvida de quem compra piscina não é o preço — é o medo da obra virar problema.</p></div>
+  </div>
+</div>
+
+<div style="height:70px"></div>
+</body>
+</html>

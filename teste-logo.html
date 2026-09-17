@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Casa Nobre — teste de logo no topo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--marinho:#212A53;--royal:#33509E;--claro:#6F96CE}
+body{font-family:'Inter',system-ui,sans-serif;background:#eef1f6;color:#212A53;padding:34px 4vw 70px}
+h1{font-size:23px;font-weight:700;margin-bottom:6px}
+.sub{color:#667;font-size:14.5px;margin-bottom:8px;line-height:1.6}
+.cores{display:flex;gap:9px;margin:16px 0 30px;flex-wrap:wrap}
+.c{padding:8px 14px;border-radius:7px;color:#fff;font-size:12px;font-weight:600;font-family:ui-monospace,monospace}
+
+.bloco{background:#fff;border-radius:15px;overflow:hidden;margin-bottom:26px;
+  box-shadow:0 3px 18px rgba(33,42,83,.09)}
+.head{padding:15px 22px;border-bottom:1px solid #eceff5;display:flex;
+  justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.head h2{font-size:15.5px;font-weight:700}
+.tag{font-size:11px;padding:4px 11px;border-radius:20px;font-weight:700;letter-spacing:.04em}
+.ok{background:#e4f5ea;color:#1a7a40}
+.no{background:#fdeaea;color:#b23434}
+.mid{background:#fff6e3;color:#94660d}
+.nota{padding:11px 22px;font-size:13.2px;color:#666;line-height:1.65;background:#fbfcfe;border-bottom:1px solid #eceff5}
+.nota b{color:#212A53}
+
+/* simulacao de barra sobre foto */
+.palco{height:190px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#2a7fa8 0%,#0E6382 45%,#07374a 100%)}
+.palco::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,.12) 60%,rgba(0,0,0,.3))}
+.palco.claro{background:#fff}
+.palco.claro::after{display:none}
+.palco.solido{background:var(--marinho)}
+.palco.solido::after{display:none}
+.barra{position:absolute;top:0;left:0;right:0;height:74px;display:flex;align-items:center;
+  justify-content:space-between;padding:0 26px;z-index:5}
+.barra.fix{background:rgba(33,42,83,.95);backdrop-filter:blur(12px)}
+.barra.fixbranco{background:rgba(255,255,255,.97);box-shadow:0 1px 14px rgba(0,0,0,.09)}
+.menu{display:flex;gap:22px;align-items:center}
+.menu a{font-size:12.5px;font-weight:500;text-decoration:none}
+.m-claro a{color:rgba(255,255,255,.93)}
+.m-escuro a{color:#3a4a6b}
+.zap{background:#25D366;color:#fff!important;padding:8px 15px;border-radius:30px;font-weight:600;font-size:12px}
+.legenda{position:absolute;bottom:9px;left:26px;z-index:6;font-size:10.5px;
+  letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.62)}
+.legenda.esc{color:rgba(33,42,83,.42)}
+.escala{padding:18px 22px;display:flex;gap:30px;align-items:flex-end;flex-wrap:wrap;background:#fafbfd}
+.escala .it{text-align:center}
+.escala .lb{font-size:10px;color:#889;margin-top:7px;letter-spacing:.08em;text-transform:uppercase}
+.rec{background:linear-gradient(135deg,#212A53,#33509E);color:#fff;padding:22px 26px;border-radius:15px;
+  margin-bottom:26px;line-height:1.72;font-size:14.5px}
+.rec h3{font-size:16px;margin-bottom:9px}
+.rec b{color:#9EC2F0}
+</style>
+</head>
+<body>
+
+<h1>Logo no topo do site — qual versão segura</h1>
+<p class="sub">Mesma barra, mesmas condições. Cores <b>medidas dos seus arquivos</b> (contagem de pixel), não estimadas a olho.</p>
+<div class="cores">
+  <div class="c" style="background:#212A53">#212A53 marinho</div>
+  <div class="c" style="background:#33509E">#33509E royal</div>
+  <div class="c" style="background:#6F96CE">#6F96CE claro</div>
+</div>
+
+<div class="rec">
+  <h3>O problema que você já identificou</h3>
+  Não existe versão negativa — e o hero é <b>foto escura</b>. Logo marinho sobre foto some.
+  Abaixo, a opção 1 mostra exatamente isso; as opções 2 e 3 são as saídas.
+</div>
+
+<!-- 1. HORIZONTAL ORIGINAL SOBRE FOTO -->
+<div class="bloco">
+  <div class="head"><h2>1 · Horizontal original (marinho) sobre foto</h2><span class="tag no">não funciona</span></div>
+  <div class="nota">É a prancheta 1 como está. Sobre foto escura o "CASA" marinho <b>desaparece</b> e o "PISCINAS" claro fica ilegível. Prova de que o negativo é necessário.</div>
+  <div class="palco">
+    <div class="barra m-claro">
+      <svg width="176" height="44" viewBox="0 0 320 80">
+        <text x="0" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="800" fill="#212A53" letter-spacing="-1">CASA</text>
+        <text x="122" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="300" fill="#33509E" letter-spacing="1">NOBRE</text>
+        <path d="M10 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <text x="180" y="68" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#6F96CE" letter-spacing="6">PISCINAS</text>
+      </svg>
+      <div class="menu"><a>Modelos</a><a>Projetos</a><a>Contato</a><a class="zap">Orçamento</a></div>
+    </div>
+    <div class="legenda">hero com foto — logo original</div>
+  </div>
+</div>
+
+<!-- 2. NEGATIVO BRANCO -->
+<div class="bloco">
+  <div class="head"><h2>2 · Negativo branco + onda azul-clara</h2><span class="tag ok">recomendo</span></div>
+  <div class="nota">Letra toda branca, <b>onda mantida em #6F96CE</b> — é o que preserva a identidade sem perder leitura. Funciona sobre qualquer foto, clara ou escura. É a versão que falta criar.</div>
+  <div class="palco">
+    <div class="barra m-claro">
+      <svg width="176" height="44" viewBox="0 0 320 80">
+        <text x="0" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="800" fill="#fff" letter-spacing="-1">CASA</text>
+        <text x="122" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="300" fill="#fff" letter-spacing="1">NOBRE</text>
+        <path d="M10 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <text x="180" y="68" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,.9)" letter-spacing="6">PISCINAS</text>
+      </svg>
+      <div class="menu"><a>Modelos</a><a>Projetos</a><a>Contato</a><a class="zap">Orçamento</a></div>
+    </div>
+    <div class="legenda">hero com foto — negativo</div>
+  </div>
+</div>
+
+<!-- 3. BARRA SOLIDA -->
+<div class="bloco">
+  <div class="head"><h2>3 · Barra marinho sólida, logo original</h2><span class="tag mid">seguro, menos bonito</span></div>
+  <div class="nota">Evita criar negativo: a barra recebe fundo <b>#212A53</b> e o logo usa branco+claro por cima. Some a foto atrás do topo — perde o efeito imersivo do hero.</div>
+  <div class="palco">
+    <div class="barra fix m-claro">
+      <svg width="176" height="44" viewBox="0 0 320 80">
+        <text x="0" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="800" fill="#fff" letter-spacing="-1">CASA</text>
+        <text x="122" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="300" fill="#6F96CE" letter-spacing="1">NOBRE</text>
+        <path d="M10 52 q20 -12 40 0 t40 0" stroke="#33509E" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <text x="180" y="68" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#6F96CE" letter-spacing="6">PISCINAS</text>
+      </svg>
+      <div class="menu"><a>Modelos</a><a>Projetos</a><a>Contato</a><a class="zap">Orçamento</a></div>
+    </div>
+    <div class="legenda">barra sólida</div>
+  </div>
+</div>
+
+<!-- 4. EMPILHADO -->
+<div class="bloco">
+  <div class="head"><h2>4 · Empilhado (prancheta 2) na barra</h2><span class="tag no">alto demais</span></div>
+  <div class="nota">Duas linhas + assinatura exigem <b>~96px de altura</b> de barra. Come a dobra do hero e no celular fica pior. O empilhado é ótimo para Instagram e fachada — não para topo de site.</div>
+  <div class="palco">
+    <div class="barra m-claro" style="height:96px;align-items:center">
+      <svg width="118" height="76" viewBox="0 0 200 128">
+        <text x="14" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="800" fill="#fff" letter-spacing="-1">CASA</text>
+        <path d="M22 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <text x="4" y="93" font-family="Inter,sans-serif" font-size="41" font-weight="300" fill="#fff" letter-spacing="1">NOBRE</text>
+        <text x="50" y="117" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.88)" letter-spacing="5.5">PISCINAS</text>
+      </svg>
+      <div class="menu"><a>Modelos</a><a>Projetos</a><a>Contato</a><a class="zap">Orçamento</a></div>
+    </div>
+    <div class="legenda">empilhado — barra 96px</div>
+  </div>
+</div>
+
+<!-- 5. BARRA BRANCA -->
+<div class="bloco">
+  <div class="head"><h2>5 · Barra branca (ao rolar a página)</h2><span class="tag ok">usar junto da 2</span></div>
+  <div class="nota">Quando o usuário rola e sai do hero, a barra vira branca e o logo volta ao <b>original colorido</b>. É a dupla que resolve: negativo em cima da foto, original no branco.</div>
+  <div class="palco claro">
+    <div class="barra fixbranco m-escuro">
+      <svg width="176" height="44" viewBox="0 0 320 80">
+        <text x="0" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="800" fill="#212A53" letter-spacing="-1">CASA</text>
+        <text x="122" y="46" font-family="Inter,sans-serif" font-size="43" font-weight="300" fill="#33509E" letter-spacing="1">NOBRE</text>
+        <path d="M10 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <text x="180" y="68" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#6F96CE" letter-spacing="6">PISCINAS</text>
+      </svg>
+      <div class="menu"><a>Modelos</a><a>Projetos</a><a>Contato</a><a class="zap">Orçamento</a></div>
+    </div>
+    <div class="legenda esc">barra branca — pós-scroll</div>
+  </div>
+</div>
+
+<!-- 6. SIMBOLO SOZINHO -->
+<div class="bloco">
+  <div class="head"><h2>6 · Só a onda (ícone solto)</h2><span class="tag mid">favicon / app</span></div>
+  <div class="nota">A onda das pranchetas 3–6 isolada. <b>Não serve de logo no topo</b> — ninguém identifica a marca só pela onda. Serve para favicon, ícone de app, selo de rodapé e marca d'água em foto.</div>
+  <div class="escala">
+    <div class="it"><svg width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#212A53"/><path d="M13 36 q9 -13 18 0 t18 0" stroke="#6F96CE" stroke-width="5" fill="none" stroke-linecap="round"/></svg><div class="lb">64px</div></div>
+    <div class="it"><svg width="42" height="42" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#212A53"/><path d="M13 36 q9 -13 18 0 t18 0" stroke="#6F96CE" stroke-width="5" fill="none" stroke-linecap="round"/></svg><div class="lb">42px</div></div>
+    <div class="it"><svg width="28" height="28" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#212A53"/><path d="M13 36 q9 -13 18 0 t18 0" stroke="#6F96CE" stroke-width="6" fill="none" stroke-linecap="round"/></svg><div class="lb">28px</div></div>
+    <div class="it"><svg width="16" height="16" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill="#212A53"/><path d="M13 36 q9 -13 18 0 t18 0" stroke="#6F96CE" stroke-width="8" fill="none" stroke-linecap="round"/></svg><div class="lb">16px favicon</div></div>
+  </div>
+</div>
+
+</body>
+</html>
