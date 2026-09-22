@@ -22,8 +22,8 @@ body{font-family:'Outfit',system-ui,-apple-system,sans-serif;color:var(--marinho
   align-items:center;justify-content:space-between;transition:.45s cubic-bezier(.4,0,.2,1);background:transparent}
 .barra.fixa{background:rgba(255,255,255,.97);backdrop-filter:blur(14px);padding:11px 5vw;
   box-shadow:0 2px 24px rgba(33,42,83,.13)}
-.logo-wrap{position:relative;height:46px;width:196px;flex-shrink:0}
-.logo-wrap svg{position:absolute;top:0;left:0;height:46px;width:196px;transition:opacity .4s}
+.logo-wrap{position:relative;height:42px;width:226px;flex-shrink:0}
+.logo-wrap img{position:absolute;top:0;left:0;height:42px;width:226px;transition:opacity .4s}
 .logo-neg{opacity:1}
 .logo-cor{opacity:0}
 .barra.fixa .logo-neg{opacity:0}

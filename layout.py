@@ -17,25 +17,17 @@ NAV = [
 ]
 
 AVISO = ('⚠️ Modelo de apresentação — fotos, vídeo e números são <b>placeholder</b>. '
-         'Logo reconstruído (falta o vetor original).')
+         'Logo em PNG (falta o vetor original).')
 
 # Uma familia so no site inteiro: Outfit no corpo E nos titulos (peso 200 nos
 # titulos grandes). Fraunces saiu em 2026-09-16 por decisao do Davi.
 FONTES = ('https://fonts.googleapis.com/css2?'
           'family=Outfit:wght@200;300;400;500;600;700;800&display=swap')
 
-LOGO = '''<svg class="logo-neg" viewBox="0 0 320 80">
-      <text x="0" y="46" font-family="Outfit,sans-serif" font-size="43" font-weight="800" fill="#fff" letter-spacing="-1">CASA</text>
-      <text x="122" y="46" font-family="Outfit,sans-serif" font-size="43" font-weight="300" fill="#fff" letter-spacing="1">NOBRE</text>
-      <path d="M10 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
-      <text x="180" y="68" font-family="Outfit,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,.9)" letter-spacing="6">PISCINAS</text>
-    </svg>
-    <svg class="logo-cor" viewBox="0 0 320 80">
-      <text x="0" y="46" font-family="Outfit,sans-serif" font-size="43" font-weight="800" fill="#212A53" letter-spacing="-1">CASA</text>
-      <text x="122" y="46" font-family="Outfit,sans-serif" font-size="43" font-weight="300" fill="#33509E" letter-spacing="1">NOBRE</text>
-      <path d="M10 52 q20 -12 40 0 t40 0" stroke="#6F96CE" stroke-width="5.5" fill="none" stroke-linecap="round"/>
-      <text x="180" y="68" font-family="Outfit,sans-serif" font-size="13" font-weight="600" fill="#6F96CE" letter-spacing="6">PISCINAS</text>
-    </svg>'''
+# Logo oficial: recorte das pranchetas do designer (PNG transparente, 2026-09-22).
+# Ainda nao e vetor — serve pra tela; pra impressao falta o SVG/AI original.
+LOGO = ('<img class="logo-neg" src="{p}midia/logo-neg.png" alt="Casa Nobre Piscinas">'
+        '<img class="logo-cor" src="{p}midia/logo-cor.png" alt="" aria-hidden="true">')
 
 ENDERECO = ('Av. Ayrton Senna da Silva, 3000<br>Jd. Busmayer — Campo Largo/PR<br>CEP 83606-390')
 TELEFONE = '(41) 3393-2590'
@@ -62,7 +54,7 @@ def cabecalho(atual, p, solida):
   <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-</header>''' % (classe, casa, LOGO, '\n    '.join(itens))
+</header>''' % (classe, casa, LOGO.format(p=p), '\n    '.join(itens))
 
 
 def rodape(p):
